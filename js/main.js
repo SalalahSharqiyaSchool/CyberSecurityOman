@@ -88,25 +88,6 @@ function handleModalClick(e) {
   if (e.target.id === "videoModal") closeVideo();
 }
 
-function closeVideo() {
-  const modal = document.getElementById("videoModal");
-  const frame = document.getElementById("videoFrame");
-
-  // إيقاف الفيديو
-  frame.src = "";
-
-  // إغلاق المودال
-  modal.style.display = "none";
-  document.body.style.overflow = "";
-}
-
-// إغلاق المودال بالنقر خارجه
-document.addEventListener("click", function(e) {
-  if (e.target.id === "videoModal") {
-    closeVideo();
-  }
-});
-
 // ── QUIZ DATA & LOGIC ──
 const questions=[
   {q:'ما معنى كلمة \"Phishing\"؟',e:'🎣',opts:['التصيد الاحتيالي','برنامج خبيث','جدار الحماية','التشفير'],a:0,fb:'التصيد الاحتيالي هو محاولة خداعك للكشف عن بيانات سرية عبر رسائل مزيفة.'},
