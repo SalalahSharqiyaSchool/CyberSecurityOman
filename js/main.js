@@ -63,22 +63,23 @@ document.querySelectorAll('nav a[href^=\"#\"]').forEach(anchor => {
 });
 
 // ── VIDEO MODAL ──
-function openVideo(title,emoji,desc){
-  const modal = document.getElementById('videoModal');
-  if(!modal) return;
-  document.getElementById('modalTitle').textContent=title;
-  document.getElementById('modalEmoji').textContent=emoji;
-  document.getElementById('modalDesc').textContent=desc;
-  modal.classList.add('active');
+function openVideo(title, emoji, desc, url) {
+  document.getElementById("videoModal").classList.add("active");
+  document.getElementById("modalTitle").innerText = title;
+
+  // تحويل رابط اليوتيوب إلى embed
+  let videoId = url.split("v=")[1];
+  let embedUrl = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+
+  document.getElementById("videoFrame").src = embedUrl;
 }
-function closeVideo(){ 
-  const modal = document.getElementById('videoModal');
-  if(modal) modal.classList.remove('active');
+
+function closeVideo() {
+  document.getElementById("videoModal").classList.remove("active");
+
+  // إيقاف الفيديو
+  document.getElementById("videoFrame").src = "";
 }
-document.addEventListener('click',function(e){
-  const modal = document.getElementById('videoModal');
-  if(e.target === modal) closeVideo();
-});
 
 // ── QUIZ DATA & LOGIC ──
 const questions=[
