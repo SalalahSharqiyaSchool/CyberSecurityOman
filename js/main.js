@@ -64,21 +64,29 @@ document.querySelectorAll('nav a[href^=\"#\"]').forEach(anchor => {
 
 // ── VIDEO MODAL ──
 function openVideo(title, emoji, desc, url) {
-  document.getElementById("videoModal").classList.add("active");
-  document.getElementById("modalTitle").innerText = title;
+  const modal = document.getElementById("videoModal");
+  const frame = document.getElementById("videoFrame");
 
-  // تحويل رابط اليوتيوب إلى embed
+  // فتح المودال
+  modal.style.display = "flex";
+
+  // استخراج ID الفيديو
   let videoId = url.split("v=")[1];
   let embedUrl = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
 
-  document.getElementById("videoFrame").src = embedUrl;
+  // تشغيل الفيديو
+  frame.src = embedUrl;
 }
 
 function closeVideo() {
-  document.getElementById("videoModal").classList.remove("active");
+  const modal = document.getElementById("videoModal");
+  const frame = document.getElementById("videoFrame");
+
+  // إغلاق المودال
+  modal.style.display = "none";
 
   // إيقاف الفيديو
-  document.getElementById("videoFrame").src = "";
+  frame.src = "";
 }
 
 // ── QUIZ DATA & LOGIC ──
