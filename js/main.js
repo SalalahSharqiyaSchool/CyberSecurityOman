@@ -63,34 +63,48 @@ document.querySelectorAll('nav a[href^=\"#\"]').forEach(anchor => {
 });
 
 // ── VIDEO MODAL ──
+// ── VIDEO MODAL ──
 function openVideo(title, emoji, desc, url) {
-  const player = document.getElementById("videoPlayer");
+  const modal = document.getElementById("videoModal");
   const frame = document.getElementById("videoFrame");
+  const modalTitle = document.getElementById("modalTitle");
 
-  // استخراج ID
+  // استخراج ID الفيديو
   let videoId = url.split("v=")[1];
+  if (videoId && videoId.includes("&")) {
+    videoId = videoId.split("&")[0];
+  }
   let embedUrl = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
 
-  // عرض المشغل
-  player.style.display = "block";
+  // تعيين العنوان
+  if (modalTitle) modalTitle.textContent = emoji + " " + title;
 
   // تشغيل الفيديو
   frame.src = embedUrl;
 
-  // سكرول للفيديو
-  player.scrollIntoView({ behavior: "smooth" });
+  // إظهار المودال
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
 }
 
 function closeVideo() {
   const modal = document.getElementById("videoModal");
   const frame = document.getElementById("videoFrame");
 
-  // إغلاق المودال
-  modal.style.display = "none";
-
   // إيقاف الفيديو
   frame.src = "";
+
+  // إغلاق المودال
+  modal.style.display = "none";
+  document.body.style.overflow = "";
 }
+
+// إغلاق المودال بالنقر خارجه
+document.addEventListener("click", function(e) {
+  if (e.target.id === "videoModal") {
+    closeVideo();
+  }
+});
 
 // ── QUIZ DATA & LOGIC ──
 const questions=[
