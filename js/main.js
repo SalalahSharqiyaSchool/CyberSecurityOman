@@ -64,18 +64,21 @@ document.querySelectorAll('nav a[href^=\"#\"]').forEach(anchor => {
 
 // ── VIDEO MODAL ──
 function openVideo(title, emoji, desc, url) {
-  const modal = document.getElementById("videoModal");
+  const player = document.getElementById("videoPlayer");
   const frame = document.getElementById("videoFrame");
 
-  // فتح المودال
-  modal.style.display = "flex";
-
-  // استخراج ID الفيديو
+  // استخراج ID
   let videoId = url.split("v=")[1];
   let embedUrl = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
 
+  // عرض المشغل
+  player.style.display = "block";
+
   // تشغيل الفيديو
   frame.src = embedUrl;
+
+  // سكرول للفيديو
+  player.scrollIntoView({ behavior: "smooth" });
 }
 
 function closeVideo() {
