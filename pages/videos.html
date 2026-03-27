@@ -143,7 +143,7 @@
   </div>
 </section>
 
-<!-- VIDEO MODAL — إطار واحد فقط، بدون تكرار id="videoFrame" -->
+<!-- ✅ VIDEO MODAL — بعد التعديل -->
 <div class="modal-overlay" id="videoModal" onclick="handleModalClick(event)">
   <div class="modal-box">
     <div class="modal-header">
@@ -151,11 +151,11 @@
       <button class="modal-close" onclick="closeVideo()">✕</button>
     </div>
     <div class="modal-video">
-      <iframe id="videoFrame"
-        style="width:100%; height:60vh; border-radius:12px;"
+      <iframe
+        id="videoFrame"
         src=""
         frameborder="0"
-        allow="autoplay; encrypted-media"
+        allow="autoplay; encrypted-media; picture-in-picture"
         allowfullscreen>
       </iframe>
     </div>
