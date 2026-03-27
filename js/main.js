@@ -69,22 +69,23 @@ function openVideo(title, emoji, desc, url) {
   const frame = document.getElementById("videoFrame");
   const modalTitle = document.getElementById("modalTitle");
 
-  // استخراج ID الفيديو
   let videoId = url.split("v=")[1];
-  if (videoId && videoId.includes("&")) {
-    videoId = videoId.split("&")[0];
-  }
-  let embedUrl = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+  if (videoId && videoId.includes("&")) videoId = videoId.split("&")[0];
 
-  // تعيين العنوان
   if (modalTitle) modalTitle.textContent = emoji + " " + title;
-
-  // تشغيل الفيديو
-  frame.src = embedUrl;
-
-  // إظهار المودال
-  modal.style.display = "flex";
+  frame.src = "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+  modal.classList.add("active");
   document.body.style.overflow = "hidden";
+}
+
+function closeVideo() {
+  document.getElementById("videoFrame").src = "";
+  document.getElementById("videoModal").classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+function handleModalClick(e) {
+  if (e.target.id === "videoModal") closeVideo();
 }
 
 function closeVideo() {
