@@ -863,7 +863,7 @@ function printCert(){
   <div class="cert-top-bar">
     <span class="bar-text">سلطنة عُمان</span>
     <span class="bar-dot"></span>
-    <span class="bar-text">وزارة التربية والتعليم</span>
+    <span class="bar-text">وزارة التعليم</span>
     <span class="bar-dot"></span>
     <span class="bar-text">محافظة ظفار</span>
     <span class="bar-dot"></span>
@@ -876,7 +876,7 @@ function printCert(){
     <div class="cert-header-row">
       <div class="cert-shield">🛡️</div>
       <div class="cert-institution">
-        <div class="cert-ministry">وزارة التربية والتعليم — سلطنة عُمان</div>
+        <div class="cert-ministry">وزارة التعليم — سلطنة عُمان</div>
         <div class="cert-school">مدرسة صلالة الشرقية للتعليم الأساسي</div>
         <div class="cert-subject-line">قسم تقنية المعلومات</div>
       </div>
@@ -887,13 +887,13 @@ function printCert(){
 
     <div class="cert-main-heading">شـهـادة تـقـديـر</div>
 
-    <div class="cert-presented-label">تُمنح هذه الشهادة إلى الطالب / الطالبة</div>
+    <div class="cert-presented-label">تُمنح هذه الشهادة إلى الطالب </div>
 
     <div class="cert-student-name">${name}</div>
     <div class="cert-student-grade-txt">${grade}</div>
 
     <div class="cert-body">
-      تقديراً واعترافاً بإتمامه/ها بنجاح جميع أنشطة وفعاليات
+      تقديراً واعترافاً بإتمامه بنجاح جميع أنشطة وفعاليات
     </div>
 
     <div class="cert-topic-box">🛡️ ${topic}</div>
@@ -938,7 +938,7 @@ function printCert(){
     <span>—</span>
     <span>قسم تقنية المعلومات</span>
     <span>—</span>
-    <span>أسبوع الأمن السيبراني 2025</span>
+    <span>أسبوع الأمن السيبراني 2026</span>
   </div>
 
 </div>
