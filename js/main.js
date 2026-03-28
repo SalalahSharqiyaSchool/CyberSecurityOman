@@ -867,7 +867,7 @@ function printCert(){
     <span class="bar-dot"></span>
     <span class="bar-text">محافظة ظفار</span>
     <span class="bar-dot"></span>
-    <span class="bar-text">صلالة الشرقية للتعليم الأساسي</span>
+    <span class="bar-text"> مدرسة صلالة الشرقية للتعليم الأساسي</span>
   </div>
 
   <!-- المحتوى الرئيسي -->
@@ -925,7 +925,7 @@ function printCert(){
         <div class="footer-label">تاريخ الإصدار</div>
         <div class="signature-line"></div>
         <div class="footer-value">${date}</div>
-        <div class="footer-sub">1446 هـ</div>
+        <div class="footer-sub">1447 هـ</div>
       </div>
     </div>
 
