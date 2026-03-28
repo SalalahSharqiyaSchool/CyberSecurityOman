@@ -348,7 +348,7 @@ section{position:relative;z-index:2;padding:80px 20px}
   font-family:'Tajawal',sans-serif;font-weight:700;font-size:.95rem;
   transition:.2s;
 }
-.btn-next{background:linear-gradient(135deg,var(--green),var(--cyan));color:#060b14}
+.btn-next{background:linear-gradient(135deg,var(--green),var(--cyan));color:#ffffff}
 .btn-next:hover{transform:translateY(-2px);box-shadow:0 5px 20px rgba(0,255,136,0.3)}
 .quiz-score-box{
   background:var(--card);border:1px solid var(--border);
